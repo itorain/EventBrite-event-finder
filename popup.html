@@ -1,0 +1,51 @@
+<!doctype html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/popup.css">
+  </head>
+
+  <body>
+    <a href="https://www.eventbrite.com" target="_blank"><img id="logo" src="assets/teventbrite_logo.png"></a>
+
+    <!-- Ask for permission to use geolocation -->
+    <div id="greeting"> This extension is attempting to use your location. Allow?</div>
+    <div class="input_buttons">
+      <button type="button" class="yes_button">Yes</button>
+      <button type="button" class="no_button">No</button>
+    </div>
+    <!-------------------------------------------->
+
+    <!-- if geolocation is not available then show location input window -->
+    <div class="input_boxes">
+      <input id="city_input" class="input" type="text" placeholder="Enter your location...">
+      <input id="state_input" class="input" type="text" placeholder="State...">
+      <input type="image" id="search_button" src="assets/search_icon.png"></button>
+    </div>
+    <!----------------------------------------------------------------------->
+
+    <div class="selectors">
+      <input id="next_weekend_selector" type="checkbox" value="weekend">Show Events for next weekend<br>
+      <p> Search within <select id="range_selector">
+        <option value="5mi">5 miles</option>
+        <option value="10mi">10 miles</option>
+        <option value="25mi">25 miles</option>
+        <option value="50mi">50 miles</option>
+      </select> of my location</p>
+    </div>
+
+    <!-- Paragraph holders for messages  -->
+    <p id="error_message"></p>
+    <p id="loading">Finding events...</p>
+    <!------------------------------------->
+
+    <!-- Container for returned events   -->
+    <div id="events_container">
+      <h3>Here are some events popular near you!</h3>
+      <div class="w3-card-4" id="events"></div>
+    </div>
+    <!----------------------------->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Eventbrite Location Extension",
+  "version": "1.0",
+  "description": "Extension for locating nearby eventbrite events based on location.",
+  "browser_action": {
+    "default_icon": "assets/icons/chrome_icon.png",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "assets/icons/16x16.png",
+    "32": "assets/icons/32x32.png",
+    "48": "assets/icons/48x48.png",
+    "128": "assets/icons/128x128.png"
+  },
+  "permissions": [
+    "storage",
+	 "geolocation"	
+  ]
+}
