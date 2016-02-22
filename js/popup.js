@@ -148,7 +148,7 @@ function updateView(data) {
     return;
   }
 
-  for (var i = 0, len = eventsList.length; i < len; i++) {
+  for (var i = 0; i < eventsList.length; i++) {
     var name = eventsList[i].name.text;
     var description = eventsList[i].description.text.substring(0,300) + "...";
     var startTime = moment(eventsList[i].start.utc).format("dddd, MMMM Do YYYY, h:mm a"); //Format the date using moment to a user readable format
